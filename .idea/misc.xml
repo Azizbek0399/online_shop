@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic__092564_profile_about_mobile_ui_user_icon.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic__124099_menu_alt_icon.xml" value="0.2203125" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic__280487_cart_outlined_shopping_trolley_icon.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic__703085_bag_cart_ecommerce_shop_icon.xml" value="0.23333333333333334" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic__844470_home_house_icon.xml" value="0.2" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_add_circle.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_arrow_back_ios_new.xml" value="0.23697916666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_corporate_fare.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_delete.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_favorite.xml" value="0.23697916666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_favorite_border.xml" value="0.23697916666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_home.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_location_on.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_message.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_remove_circle.xml" value="0.23333333333333334" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_share.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/drawable/ic_baseline_sync.xml" value="0.22592592592592592" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/activity_make_order.xml" value="0.22" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/activity_maps.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/activity_product_detail.xml" value="0.25" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/cart_item_layout.xml" value="0.25" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/category_item_layout.xml" value="0.22447916666666667" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/fragment_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/fragment_change_language.xml" value="0.22083333333333333" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/fragment_favorite.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/fragment_home.xml" value="0.16" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/nav_header.xml" value="0.22447916666666667" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/product_item_layout.xml" value="0.25" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/user.xml" value="0.22447916666666667" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/layout/user_layout.xml" value="0.25" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android studio/Amaliyot/OnlineShop/app/src/main/res/menu/nav_menu.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
