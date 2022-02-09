@@ -1,13 +1,11 @@
-package com.example.onlineshop.repository
+package com.example.onlineshop.api.repository
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.MutableLiveData
 import com.example.onlineshop.api.NetworkManager
-import com.example.onlineshop.model.BaseResponse
-import com.example.onlineshop.model.CategoryModel
-import com.example.onlineshop.model.OfferModel
-import com.example.onlineshop.model.ProductModel
+import com.example.onlineshop.model.*
 import com.example.onlineshop.model.request.GetProductsByIdsRequest
+import com.example.onlineshop.model.request.RegisterRequest
 import com.example.onlineshop.utils.PrefUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -16,7 +14,120 @@ import io.reactivex.schedulers.Schedulers
 
 
 class ShopRepository {
-    val compositeDisposable = CompositeDisposable()
+   private val compositeDisposable = CompositeDisposable()
+
+    fun checkPhone(phone: String, error: MutableLiveData<String>, progress: MutableLiveData<Boolean>, success: MutableLiveData<CheckPhoneResponse>){
+        progress.value = true
+        compositeDisposable.add(
+            NetworkManager.getApiService().checkPhone(phone)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object: DisposableObserver<BaseResponse<CheckPhoneResponse>>(){
+                    override fun onComplete() {
+
+                    }
+
+                    override fun onNext(t: BaseResponse<CheckPhoneResponse>) {
+                        progress.value = false
+                        if (t.success){
+                            success.value = t.data
+                        }else{
+                            error.value = t.message
+                        }
+                    }
+
+                    override fun onError(e: Throwable) {
+                        progress.value = false
+                        error.value = e.localizedMessage
+                    }
+                })
+        )
+    }
+
+    fun registration(fullname: String, phone: String, password: String, error: MutableLiveData<String>, progress: MutableLiveData<Boolean>, success: MutableLiveData<Boolean>){
+        progress.value = true
+        compositeDisposable.add(
+            NetworkManager.getApiService().register(RegisterRequest(fullname, phone, password))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object: DisposableObserver<BaseResponse<Any>>(){
+                    override fun onComplete() {
+
+                    }
+
+                    override fun onNext(t: BaseResponse<Any>) {
+                        progress.value = false
+                        if (t.success){
+                            success.value = true
+                        }else{
+                            error.value = t.message
+                        }
+                    }
+
+                    override fun onError(e: Throwable) {
+                        progress.value = false
+                        error.value = e.localizedMessage
+                    }
+                })
+        )
+    }
+
+    fun confirmUser(phone: String, sms_code: String, error: MutableLiveData<String>, progress: MutableLiveData<Boolean>, success: MutableLiveData<LoginResponse>){
+        progress.value = true
+        compositeDisposable.add(
+            NetworkManager.getApiService().confirm(phone, sms_code)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object: DisposableObserver<BaseResponse<LoginResponse>>(){
+                    override fun onComplete() {
+
+                    }
+
+                    override fun onNext(t: BaseResponse<LoginResponse>) {
+                        progress.value = false
+                        if (t.success){
+                            success.value = t.data
+                        }else{
+                            error.value = t.message
+                        }
+                    }
+
+                    override fun onError(e: Throwable) {
+                        progress.value = false
+                        error.value = e.localizedMessage
+                    }
+                })
+        )
+    }
+
+    fun login(phone: String, password: String, error: MutableLiveData<String>, progress: MutableLiveData<Boolean>, success: MutableLiveData<LoginResponse>){
+        progress.value = true
+        compositeDisposable.add(
+            NetworkManager.getApiService().login(phone, password)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object: DisposableObserver<BaseResponse<LoginResponse>>(){
+                    override fun onComplete() {
+
+                    }
+
+                    override fun onNext(t: BaseResponse<LoginResponse>) {
+                        progress.value = false
+                        if (t.success){
+                            success.value = t.data
+                        }else{
+                            error.value = t.message
+                        }
+                    }
+
+                    override fun onError(e: Throwable) {
+                        progress.value = false
+                        error.value = e.localizedMessage
+                    }
+                })
+        )
+    }
+
     fun getOffer(
         error: MutableLiveData<String>,
         progress: MutableLiveData<Boolean>,

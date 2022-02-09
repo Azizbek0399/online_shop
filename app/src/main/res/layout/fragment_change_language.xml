@@ -8,6 +8,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_language"
+            android:textColor="@color/colorAccept"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnUzbek"
             android:layout_width="match_parent"

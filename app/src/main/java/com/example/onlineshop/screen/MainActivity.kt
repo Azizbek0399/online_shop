@@ -1,6 +1,8 @@
 package com.example.onlineshop.screen
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.onlineshop.R
 import com.example.onlineshop.screen.cart.CartFragment
+import com.example.onlineshop.screen.changejanguage.ChangeLanguageFragment
 import com.example.onlineshop.screen.favorite.FavoriteFragment
 import com.example.onlineshop.screen.home.HomeFragment
 import com.example.onlineshop.screen.profile.ProfileFragment
@@ -48,6 +51,28 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
         nav_view.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.settings -> {
+                    val fragment = ChangeLanguageFragment.newInstance()
+                    fragment.show(supportFragmentManager,fragment.tag)
+                }
+                R.id.nav_home -> {
+                    Toast.makeText(this,"Cicked",Toast.LENGTH_SHORT).show()
+                } R.id.nav_sync -> {
+                    Toast.makeText(this,"Cicked",Toast.LENGTH_SHORT).show()
+                } R.id.nav_delete -> {
+                    Toast.makeText(this,"Cicked",Toast.LENGTH_SHORT).show()
+                }R.id.nav_share -> {
+                    Toast.makeText(this,"Cicked",Toast.LENGTH_SHORT).show()
+                } R.id.nav_call -> {
+                    val number = "+998993267008"
+                   val dialIntent = Intent(Intent.ACTION_DIAL)
+                   dialIntent.data = Uri.parse("tel: ${number}")
+                   startActivity(dialIntent)
+                }R.id.nav_logout -> {
+                    finish()
+                }
+            }
             return@setNavigationItemSelectedListener true
         }
         // comment qo'shildi

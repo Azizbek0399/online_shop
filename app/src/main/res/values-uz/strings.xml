@@ -5,4 +5,12 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="make_order">Buyurtma berish</string>
     <string name="add_to_cart">Savatga qo`shish</string>
+    <string name="activity_1">Activity 1</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="change_language">Tilni o`zgartirish</string>
+    <string name="make_order1">Buyurtma berish</string>
+    <string name="delivery_address">Jo`natma manzili</string>
+    <string name="comment">Komentariya</string>
+    <string name="confirm_address">Manzilni tasdiqlang</string>
+    <string name="detail">Tafsilot</string>
 </resources>

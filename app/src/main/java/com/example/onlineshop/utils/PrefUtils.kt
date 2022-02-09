@@ -8,6 +8,7 @@ object PrefUtils{
     const val PREF_FAVORITES = "pref_favorites"
     const val PREF_CART = "pref_cart"
     const val PREF_FCM_TOKEN = "pref_fcm_token"
+    const val PREF_TOKEN = "pref_token"
 
 
     fun setFavorite(item:ProductModel){
@@ -56,5 +57,12 @@ object PrefUtils{
     }
     fun getFCMToken():String{
         return Hawk.get(PREF_FCM_TOKEN,"")
+    }
+    fun setToken(value: String){
+        Hawk.put(PREF_TOKEN, value)
+    }
+
+    fun getToken(): String{
+        return Hawk.get(PREF_TOKEN, "")
     }
 }

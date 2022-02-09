@@ -7,12 +7,10 @@
     <string name="add_to_cart">Add to cart</string>
     <string name="activity_1">Activity 1</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="change_language">Change language</string>
+    <string name="make_order1">Make Order</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="comment">Comment</string>
+    <string name="confirm_address">Confirm address</string>
+    <string name="detail">Detail</string>
 </resources>

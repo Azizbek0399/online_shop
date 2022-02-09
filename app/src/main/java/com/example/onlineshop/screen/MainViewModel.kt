@@ -3,10 +3,8 @@ package com.example.onlineshop.screen
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.onlineshop.db.AppDatabase
-import com.example.onlineshop.model.CategoryModel
-import com.example.onlineshop.model.OfferModel
-import com.example.onlineshop.model.ProductModel
-import com.example.onlineshop.repository.ShopRepository
+import com.example.onlineshop.model.*
+import com.example.onlineshop.api.repository.ShopRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -14,8 +12,12 @@ import kotlinx.coroutines.withContext
 
 class MainViewModel : ViewModel() {
 
+    val checkPhoneData = MutableLiveData<CheckPhoneResponse>()
     val repository = ShopRepository()
 
+    val registrationData = MutableLiveData<Boolean>()
+    val confirmData = MutableLiveData<LoginResponse>()
+    val loginData = MutableLiveData<LoginResponse>()
     val error = MutableLiveData<String>()
 
     var progress = MutableLiveData<Boolean>()
@@ -25,6 +27,23 @@ class MainViewModel : ViewModel() {
     val categoriesData = MutableLiveData<List<CategoryModel>>()
 
     val productsData = MutableLiveData<List<ProductModel>>()
+
+    fun checkPhone(phone: String){
+        repository.checkPhone(phone, error, progress, checkPhoneData)
+    }
+
+    fun registrationData(fullname: String, phone: String, password: String){
+        repository.registration(fullname, phone, password, error, progress, registrationData)
+    }
+
+    fun login(phone: String, password: String){
+        repository.login(phone, password, error, progress, loginData)
+    }
+
+    fun confirmUser(phone: String, code: String){
+        repository.confirmUser(phone, code, error, progress, confirmData)
+    }
+
 
     fun getOffers(){
         repository.getOffer(error,progress, offersData)
